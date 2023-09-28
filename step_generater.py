@@ -42,8 +42,6 @@ def iterate_frame(functor):
         if not thread.is_valid():
             break
         state, res_list = functor(state, res_list)
-        if state['cnt'] > 200000:
-            os._exit(3)
     return res_list
 
 if __name__ == '__main__':
