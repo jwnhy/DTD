@@ -300,11 +300,6 @@ def __lldb_init_module(debugger, internal_dict):
         file = open('example.lldb', 'w')
         tracefile = open(f'example.step', 'r')
         trace = eval(tracefile.read())
-        #if 'gcc' in target.executable.dirname:
-        #    file = open(f'/export/d1/hluaw/traces/gcc/{trace_name}_lldb', 'w')
-        #else:
-        #    file = open(f'/export/d1/hluaw/traces/clang/{trace_name}_lldb', 'w')
-        #sys.stdout = file
    
         process = target.LaunchSimple(None, None, os.getcwd())
         thread = process.GetThreadAtIndex(0)
