@@ -32,8 +32,6 @@ On line 6: LLDB: i = 1, GDB: i = opted
 
 It says that, on line 6, LLDB saw an variable `i` with value `1`, but GDB saw `i` has been optimized. Therefore, there is a bug in GDB causing `i` gone missing or a bug in LLDB causing a spurious `i` to appear.
 
-```
-
 ## File list
 
 - `comparator.py`: Compare two traces and yield their differences.
